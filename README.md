@@ -32,17 +32,6 @@ Sou **Cientista de Dados** e **Doutor (DSc.) em Ciências / Engenharia Biomédic
 * **Engenharia de Software e Dados:** Arquitetura de pipelines ETL de alto desempenho para grandes bases governamentais (DATASUS/SIM) e desenvolvimento de aplicações web e painéis interativos (Python, Django, R/Shiny, PostgreSQL).
 * **Fisiologia e Biomecânica Computacional:** Modelagem não-linear de cinética cardiorrespiratória ($\dot{V}O_2$), cinemática da locomoção, ajuste de curvas multiparamétricas e análise de tempo de reação cognitiva.
 
----
-
-## Projetos e Sistemas em Destaque
-
-| Projeto / Sistema | Descrição Técnica | Stack Principal |
-| :--- | :--- | :--- |
-| **Classificação Diagnóstica de ECG e Vetorcardiograma 3D** | Pipeline de processamento de sinais biomédicos e inteligência artificial para detecção de Infarto do Miocárdio, eventos isquêmicos e alterações de ST-T via reconstrução espacial 3D do VCG e Redes Neurais. | `Python` `Scikit-Learn` `Keras` `DSP` |
-| **Plataforma de Vigilância Oncológica e ETL (SIM/DATASUS)** | Ecossistema para extração, descompactação nativa, transformação e carga (ETL) de microdados de mortalidade integrado a painel geoespacial interativo para análise epidemiológica. | `R` `Shiny` `Django` `PostgreSQL` `C` |
-| **Sistema de Apoio à Decisão Clínica (Lesão Renal Aguda)** | Aplicação web para estratificação de risco clínico de rabdomiólise e lesão renal aguda, equipada com sincronização offline e geração automatizada de laudos em PDF. | `Python` `Django` `PostgreSQL` |
-| **Plataforma Analítica para Eco-hidrologia e Qualidade da Água** | Sistema web estruturado para gerenciamento de dados ambientais, análises estatísticas e monitoramento de parâmetros de potabilidade e eco-hidrologia. | `Python` `Django` `Pandas` `Plotly` |
-| **NeuroPulse — Tempo de Reação Cognitiva** | Aplicação de alta precisão temporal para avaliação neurocognitiva e biomecânica executada diretamente no navegador com latência mínima. | `Rust` `WebAssembly` `Leptos` |
 
 ---
 
