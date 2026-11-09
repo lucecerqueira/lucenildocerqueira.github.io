@@ -41,6 +41,13 @@
     margin-bottom: 8px;
     color: #58a6ff;
   }
+  .pub-category {
+    color: #58a6ff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 4px;
+  }
 </style>
 
 <div class="nav-bar">
@@ -53,10 +60,11 @@
 
 <div align="center">
   <a href="https://www.linkedin.com/in/lucenildo-cerqueira-2534b228/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="mailto:lucecerqueira@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+  <a href="https://scholar.google.com/citations?user=sbiFXRIAAAAJ&hl=pt-BR"><img src="https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"></a>
+  <a href="https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/"><img src="https://img.shields.io/badge/Web_of_Science-5E33BF?style=for-the-badge&logo=clarivate&logoColor=white" alt="Web of Science"></a>
   <a href="https://www.kaggle.com/lucenildocerqueira"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white" alt="Kaggle"></a>
   <a href="https://github.com/lucecerqueira"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
-  <a href="https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/"><img src="https://img.shields.io/badge/Web_of_Science-5E33BF?style=for-the-badge&logo=clarivate&logoColor=white" alt="Web of Science"></a>
+  <a href="mailto:lucecerqueira@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
 </div>
 
 <br>
@@ -71,11 +79,11 @@
 
 ## <a id="perfil"></a>Perfil Profissional
 
-Sou **Cientista de Dados** e **Doutor (DSc.) em Ciências / Engenharia Biomédica**, com atuação na interseção entre modelagem matemática, aprendizado de máquina (Machine e Deep Learning), engenharia de dados em saúde pública e desenvolvimento de sistemas analíticos.
+Sou **Cientista de Dados** e **Doutor (DSc.) em Ciências / Engenharia Biomédica** (PEB/COPPE/UFRJ), com atuação na interseção entre modelagem matemática, aprendizado de máquina (Machine e Deep Learning), engenharia de dados em saúde pública e desenvolvimento de sistemas analíticos.
 
-* **Ciência de Dados e IA em Saúde:** Desenvolvimento de modelos preditivos, classificação diagnóstica de sinais eletrofisiológicos (ECG/VCG), vigilância epidemiológica e análise espacial em oncologia.
+* **Ciência de Dados e IA em Saúde:** Desenvolvimento de modelos preditivos, classificação diagnóstica de sinais eletrofisiológicos (ECG, VCG e EMG), regulação autonômica, vigilância epidemiológica e análise espacial em oncologia.
 * **Engenharia de Software e Dados:** Arquitetura de pipelines ETL de alto desempenho para grandes bases governamentais (DATASUS/SIM) e desenvolvimento de aplicações web e painéis interativos (Python, Django, R/Shiny, PostgreSQL).
-* **Fisiologia e Biomecânica Computacional:** Modelagem não-linear de cinética cardiorrespiratória ($\dot{V}O_2$), ajuste de curvas multiparamétricas e análise de tempo de reação cognitiva.
+* **Fisiologia e Biomecânica Computacional:** Modelagem não-linear de cinética cardiorrespiratória ($\dot{V}O_2$), cinemática da locomoção, ajuste de curvas multiparamétricas e análise de tempo de reação cognitiva.
 
 ---
 
@@ -83,7 +91,7 @@ Sou **Cientista de Dados** e **Doutor (DSc.) em Ciências / Engenharia Biomédic
 
 <div class="project-card">
   <h4>Classificação Diagnóstica de ECG e Vetorcardiograma 3D com Machine Learning</h4>
-  <p>Pipeline de processamento de sinais biomédicos e inteligência artificial para detecção de Infarto do Miocárdio e alterações de ST-T utilizando reconstrução espacial tridimensional do vetorcardiograma (VCG).</p>
+  <p>Pipeline de processamento de sinais biomédicos e inteligência artificial para detecção de Infarto do Miocárdio, eventos isquêmicos e alterações de ST-T utilizando reconstrução espacial tridimensional do vetorcardiograma (VCG) e Redes Neurais.</p>
   <p><strong>Tecnologias:</strong> Python, Scikit-Learn, Keras, Processamento Digital de Sinais (DSP).</p>
 </div>
 
@@ -113,10 +121,24 @@ Sou **Cientista de Dados** e **Doutor (DSc.) em Ciências / Engenharia Biomédic
 
 ---
 
-## <a id="pesquisa"></a>Produção Científica e Pesquisa
+## <a id="pesquisa"></a>Produção Científica e Publicações Selecionadas
 
-* **Computing in Cardiology (2025):** *Diagnostic ECG Classification of Myocardial Infarction and ST-T Changes Using Machine Learning via 3D Vectorcardiogram.*
-* **Fisiologia do Exercício e Cinética Metabólica:** Modelagem matemática não-linear da dinâmica do consumo de oxigênio ($\dot{V}O_2$), relações $\dot{V}O_2$/velocidade e bioestatística não-paramétrica.
+Lista completa de artigos, citações e métricas acadêmicas disponível no [Google Scholar](https://scholar.google.com/citations?user=sbiFXRIAAAAJ&hl=pt-BR) e na [Web of Science (ResearcherID)](https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/).
+
+<h4 class="pub-category">Inteligência Artificial, Eletrocardiografia (ECG/VCG) e Engenharia Biomédica</h4>
+
+* **Diagnostic ECG Classification of Myocardial Infarction and ST-T Changes Using Machine Learning via 3D Vectorcardiogram.** *Computing in Cardiology (CinC)*, 2025.
+* **Detecção de Eventos Isquêmicos e Diagnóstico de Infarto via Vetorcardiograma e Redes Neurais Convolucionais / Análise Bibliométrica Computacional.** *Congresso Brasileiro de Engenharia Biomédica (CBEB)*, 2024.
+
+<h4 class="pub-category">Biomecânica Computacional, Cinemática e Processamento de Sinais</h4>
+
+* **Biomechanical alterations of gait on overweight subjects.** *Research on Biomedical Engineering*, 2018.
+* **Comparison of five kinematic-based identification methods of foot contact events during treadmill walking and running at different speeds.** *Journal of Applied Biomechanics*, 2015.
+
+<h4 class="pub-category">Fisiologia do Exercício, Cinética de VO2, Eletromiografia e Saúde</h4>
+
+* **Estudos sobre cinética cardiorrespiratória ($\dot{V}O_2$), relações metabólicas e análise eletromiográfica (EMG).** Publicações em periódicos revisados por pares incluindo *European Journal of Applied Physiology*, *Revista Brasileira de Medicina do Esporte* e *Revista de Nutrição*.
+* **Relação entre esporte, resiliência, qualidade de vida e ansiedade.** *Archives of Clinical Psychiatry (São Paulo)*, 2012.
 
 ---
 
@@ -156,8 +178,9 @@ Sou **Cientista de Dados** e **Doutor (DSc.) em Ciências / Engenharia Biomédic
 
 * **E-mail:** [lucecerqueira@gmail.com](mailto:lucecerqueira@gmail.com)
 * **LinkedIn:** [linkedin.com/in/lucenildo-cerqueira-2534b228](https://www.linkedin.com/in/lucenildo-cerqueira-2534b228/)
-* **GitHub:** [github.com/lucecerqueira](https://github.com/lucecerqueira)
+* **Google Scholar:** [scholar.google.com/citations?user=sbiFXRIAAAAJ](https://scholar.google.com/citations?user=sbiFXRIAAAAJ&hl=pt-BR)
 * **Web of Science:** [ResearcherID: 2495914](https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/)
+* **GitHub:** [github.com/lucecerqueira](https://github.com/lucecerqueira)
 
 ---
 <p align="center">
