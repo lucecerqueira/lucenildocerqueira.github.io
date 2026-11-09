@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucenildo Silva Cerqueira, DSc. | Data Science & Engenharia Biomédica</title>
+  <style>
+    :root {
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --bg-card: #1c2128;
+      --border-color: #30363d;
+      --text-primary: #e6edf3;
+      --text-secondary: #8b949e;
+      --accent: #58a6ff;
+      --accent-hover: #79c0ff;
+      --tag-bg: rgba(56, 139, 253, 0.15);
+      --tag-text: #58a6ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* Menu Superior Fixo */
+    header.top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(13, 17, 23, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    nav.nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav.nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav.nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Container Principal */
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Seção Hero / Apresentação */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 36px 0 56px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .hero .subtitle {
+      font-size: 1.12rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-size: 0.98rem;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-link {
+      display: inline-block;
+      padding: 8px 14px;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background-color: var(--bg-card);
+    }
+
+    .hero-visual {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .hero-visual figcaption {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* Títulos de Seção */
+    section {
+      padding-top: 64px;
+    }
+
+    .section-header {
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-header h2 {
+      font-size: 1.55rem;
+      color: var(--text-primary);
+    }
+
+    .section-header span {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    /* Pilares de Atuação */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 24px;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #484f58;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background-color: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 4px;
+    }
+
+    /* Lista de Artigos Científicos com DOI */
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .pub-item {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      transition: border-color 0.2s ease;
+    }
+
+    .pub-item:hover {
+      border-color: var(--accent);
+    }
+
+    .pub-content {
+      flex: 1;
+    }
+
+    .pub-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      display: block;
+      text-decoration: none;
+    }
+
+    .pub-title:hover {
+      color: var(--accent);
+    }
+
+    .pub-authors {
+      font-size: 0.87rem;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+
+    .pub-journal {
+      font-size: 0.85rem;
+      color: #a5d6ff;
+      font-style: italic;
+    }
+
+    .pub-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      min-width: 140px;
+    }
+
+    .doi-badge {
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .doi-badge:hover {
+      background-color: var(--accent);
+      color: var(--bg-primary);
+      border-color: var(--accent);
+    }
+
+    .pub-year {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    /* Stack Tecnológica */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .stack-box {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .stack-box h4 {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 8px;
+    }
+
+    /* Rodapé */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      background-color: var(--bg-secondary);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 14px 20px;
+        gap: 10px;
+      }
+      nav.nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+      .pub-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .pub-actions {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU DE NAVEGAÇÃO SUPERIOR -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <a href="#inicio" class="brand">Lucenildo Cerqueira<span>, DSc.</span></a>
+      <nav class="nav-links">
+        <a href="#atuacao">Áreas de Atuação</a>
+        <a href="#projetos">Projetos e Sistemas</a>
+        <a href="#publicacoes">Artigos Publicados (DOI)</a>
+        <a href="#stack">Stack Tecnológica</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- APRESENTAÇÃO / HERO -->
+    <div class="hero">
+      <div>
+        <h1>Lucenildo Silva Cerqueira, DSc.</h1>
+        <div class="subtitle">Cientista de Dados | Doutor em Engenharia Biomédica</div>
+        <p>
+          Pesquisador e desenvolvedor com sólida atuação na interseção entre modelagem matemática, aprendizado de máquina (Machine e Deep Learning), processamento digital de sinais biológicos (ECG, VCG, EMG), engenharia de dados em saúde pública e desenvolvimento de plataformas analíticas.
+        </p>
+        <div class="social-links">
+          <a class="btn-link" href="https://www.linkedin.com/in/lucenildo-cerqueira-2534b228/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn-link" href="https://scholar.google.com/citations?user=sbiFXRIAAAAJ&hl=pt-BR" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn-link" href="https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/" target="_blank" rel="noopener">Web of Science</a>
+          <a class="btn-link" href="https://www.kaggle.com/lucenildocerqueira" target="_blank" rel="noopener">Kaggle</a>
+          <a class="btn-link" href="https://github.com/lucecerqueira" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-link" href="mailto:lucecerqueira@gmail.com">E-mail</a>
+        </div>
+      </div>
+
+      <figure class="hero-visual">
+        <img src="./vcg_mit.gif" alt="Vetorcardiograma 3D - Processamento de Sinais Cardíacos">
+        <figcaption>Reconstrução espacial tridimensional e dinâmica de sinais eletrocardiográficos (Vetorcardiograma 3D).</figcaption>
+      </figure>
+    </div>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="atuacao">
+      <div class="section-header">
+        <h2>Áreas de Especialização</h2>
+        <span>Pesquisa Científica e Desenvolvimento Tecnológico</span>
+      </div>
+      <div class="pillars-grid">
+        <div class="card">
+          <h3>Ciência de Dados e IA em Saúde</h3>
+          <p>Desenvolvimento de modelos preditivos, classificação diagnóstica de sinais eletrofisiológicos (ECG, VCG e EMG), regulação autonômica, vigilância epidemiológica e análise espacial em oncologia.</p>
+        </div>
+        <div class="card">
+          <h3>Engenharia de Dados e Sistemas Web</h3>
+          <p>Arquitetura de pipelines ETL de alto desempenho para grandes bases governamentais (DATASUS/SIM) e construção de aplicações analíticas e painéis interativos em produção.</p>
+        </div>
+        <div class="card">
+          <h3>Biomecânica e Fisiologia Computacional</h3>
+          <p>Modelagem matemática não-linear da cinética cardiorrespiratória (VO2), análise cinemática da locomoção, sincronização cardiolocomotora e tempo de reação neurocognitiva.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS E SISTEMAS -->
+    <section id="projetos">
+      <div class="section-header">
+        <h2>Projetos e Sistemas em Destaque</h2>
+        <span>Soluções Aplicadas em Engenharia Biomédica e Data Science</span>
+      </div>
+      <div class="pillars-grid">
+        <div class="card">
+          <h3>Classificação Diagnóstica de ECG / VCG 3D</h3>
+          <p>Pipeline de processamento de sinais biomédicos e inteligência artificial para detecção de Infarto do Miocárdio e alterações de ST-T via reconstrução espacial 3D do vetorcardiograma.</p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Scikit-Learn</span>
+            <span class="tag">Keras</span>
+            <span class="tag">Processamento de Sinais</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Vigilância Oncológica e Pipeline ETL (SIM/DATASUS)</h3>
+          <p>Ecossistema para extração, descompactação nativa em C, transformação e carga de microdados de mortalidade integrado a painel geoespacial interativo.</p>
+          <div class="tag-list">
+            <span class="tag">R / Shiny</span>
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">C</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Apoio à Decisão Clínica (Lesão Renal Aguda)</h3>
+          <p>Aplicação web para estratificação de risco clínico de rabdomiólise e lesão renal aguda, equipada com operação offline resiliente e geração automatizada de laudos em PDF.</p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Modelagem Clínica</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Plataforma Analítica para Eco-hidrologia</h3>
+          <p>Sistema web para gerenciamento de dados ambientais, modelagem estatística e monitoramento de indicadores de qualidade da água para consumo humano.</p>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Plotly</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>NeuroPulse — Tempo de Reação Cognitiva</h3>
+          <p>Aplicação de alta precisão temporal para avaliação neurocognitiva e biomecânica executada diretamente no navegador via WebAssembly com latência mínima.</p>
+          <div class="tag-list">
+            <span class="tag">Rust</span>
+            <span class="tag">WebAssembly</span>
+            <span class="tag">Leptos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUÇÃO CIENTÍFICA COM LINKS DOI -->
+    <section id="publicacoes">
+      <div class="section-header">
+        <h2>Produção Científica e Publicações</h2>
+        <span>Artigos revisados por pares indexados com link direto via DOI</span>
+      </div>
+
+      <div class="pub-list">
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://scholar.google.com/citations?user=sbiFXRIAAAAJ&hl=pt-BR" target="_blank" rel="noopener">
+              Diagnostic ECG Classification of Myocardial Infarction and ST-T Changes Using Machine Learning via 3D Vectorcardiogram
+            </a>
+            <div class="pub-authors">LS Cerqueira, et al.</div>
+            <div class="pub-journal">Computing in Cardiology (CinC)</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2025</span>
+            <a class="doi-badge" href="https://scholar.google.com/citations?user=sbiFXRIAAAAJ&hl=pt-BR" target="_blank" rel="noopener">Ver Publicação</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.1007/978-3-031-49407-9_11" target="_blank" rel="noopener">
+              Bibliometric Analysis Using Bibliometrix and VOSviewer Applications in Biomedical Engineering
+            </a>
+            <div class="pub-authors">FSD Neto, LS Cerqueira, J Nadal</div>
+            <div class="pub-journal">Brazilian Congress on Biomedical Engineering (IFMBE Proceedings, pp. 115–126)</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2024 | 2 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.1007/978-3-031-49407-9_11" target="_blank" rel="noopener">DOI: 10.1007/978-3-031-49407-9_11</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.1590/2446-4740.180032" target="_blank" rel="noopener">
+              Biomechanical alterations of gait on overweight subjects
+            </a>
+            <div class="pub-authors">FR Silva, AMS Muniz, LS Cerqueira, J Nadal</div>
+            <div class="pub-journal">Research on Biomedical Engineering, 34(4), 291–298</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2018 | 42 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.1590/2446-4740.180032" target="_blank" rel="noopener">DOI: 10.1590/2446-4740.180032</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.1007/s00421-016-3521-7" target="_blank" rel="noopener">
+              Crossover assessment of cardiolocomotor synchronization during running
+            </a>
+            <div class="pub-authors">LS Cerqueira, A D'Affonsêca Netto, RGT Mello, J Nadal</div>
+            <div class="pub-journal">European Journal of Applied Physiology, 117(2), 315–322</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2017 | 3 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.1007/s00421-016-3521-7" target="_blank" rel="noopener">DOI: 10.1007/s00421-016-3521-7</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.1123/jab.2014-0178" target="_blank" rel="noopener">
+              Comparison of five kinematic-based identification methods of foot contact events during treadmill walking and running at different speeds
+            </a>
+            <div class="pub-authors">F Alvim, L Cerqueira, ADA Netto, G Leite, A Muniz</div>
+            <div class="pub-journal">Journal of Applied Biomechanics, 31(5), 383–388</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2015 | 49 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.1123/jab.2014-0178" target="_blank" rel="noopener">DOI: 10.1123/jab.2014-0178</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.5812/archneurosci.18780" target="_blank" rel="noopener">
+              Acute effect of different patterns of exercise on mood, anxiety and cortical activity
+            </a>
+            <div class="pub-authors">TT Guimaraes, BM da Costa, LS Cerqueira, A Serdeiro, F Pompeu, ...</div>
+            <div class="pub-journal">Archives of Neuroscience, 2(1), e18780</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2015 | 23 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.5812/archneurosci.18780" target="_blank" rel="noopener">DOI: 10.5812/archneurosci.18780</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.1590/1415-52732014000300010" target="_blank" rel="noopener">
+              Co-ingestion of carbohydrate and pea protein does not enhance muscle recovery after strenuous exercise
+            </a>
+            <div class="pub-authors">LAA Coutinho, LS Cerqueira, AVS Rodrigues, CPM Porto, APTR Pierucci</div>
+            <div class="pub-journal">Revista de Nutrição, 27(3), 367–377</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2014 | 7 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.1590/1415-52732014000300010" target="_blank" rel="noopener">DOI: 10.1590/1415-52732014000300010</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.1590/S1517-86922013000600016" target="_blank" rel="noopener">
+              Electromyography of the biceps brachii during dynamic contractions
+            </a>
+            <div class="pub-authors">LS Cerqueira, JF Carvalho, FAMS Pompeu</div>
+            <div class="pub-journal">Revista Brasileira de Medicina do Esporte, 19(6), 457–461</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2013 | 6 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.1590/S1517-86922013000600016" target="_blank" rel="noopener">DOI: 10.1590/S1517-86922013000600016</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.1590/S0101-60832012000300003" target="_blank" rel="noopener">
+              Relação entre esporte, resiliência, qualidade de vida e ansiedade
+            </a>
+            <div class="pub-authors">T Cevada, LS Cerqueira, HS Moraes, TM Santos, FAMS Pompeu, A Deslandes</div>
+            <div class="pub-journal">Archives of Clinical Psychiatry (São Paulo), 39(3), 85–89</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2012 | 146 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.1590/S0101-60832012000300003" target="_blank" rel="noopener">DOI: 10.1590/S0101-60832012000300003</a>
+          </div>
+        </article>
+
+        <article class="pub-item">
+          <div class="pub-content">
+            <a class="pub-title" href="https://doi.org/10.1590/S1517-86922011000400013" target="_blank" rel="noopener">
+              Resposta da cinética de consumo de oxigênio e da eficiência mecânica delta de homens e mulheres em diferentes intensidades de esforço (Oxygen uptake kinetics and delta mechanical efficiency response of men and women at different exercise intensities)
+            </a>
+            <div class="pub-authors">LS Cerqueira, FS Nogueira, J Carvalho, FAMS Pompeu</div>
+            <div class="pub-journal">Revista Brasileira de Medicina do Esporte, 17(4), 274–278</div>
+          </div>
+          <div class="pub-actions">
+            <span class="pub-year">2011 | 3 citações</span>
+            <a class="doi-badge" href="https://doi.org/10.1590/S1517-86922011000400013" target="_blank" rel="noopener">DOI: 10.1590/S1517-86922011000400013</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- STACK TECNOLÓGICA -->
+    <section id="stack">
+      <div class="section-header">
+        <h2>Stack Tecnológica</h2>
+        <span>Ferramentas, Linguagens e Infraestrutura</span>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-box">
+          <h4>Linguagens e Bancos de Dados</h4>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">SQL</span>
+            <span class="tag">C</span>
+            <span class="tag">Rust</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="stack-box">
+          <h4>Data Science e Machine Learning</h4>
+          <div class="tag-list">
+            <span class="tag">Scikit-Learn</span>
+            <span class="tag">Keras</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">SciPy</span>
+            <span class="tag">Plotly</span>
+            <span class="tag">Jupyter</span>
+          </div>
+        </div>
+        <div class="stack-box">
+          <h4>Aplicações Web e Dashboards</h4>
+          <div class="tag-list">
+            <span class="tag">Django</span>
+            <span class="tag">R Shiny</span>
+            <span class="tag">bs4Dash</span>
+            <span class="tag">Leaflet</span>
+            <span class="tag">Metabase</span>
+            <span class="tag">WebAssembly</span>
+          </div>
+        </div>
+        <div class="stack-box">
+          <h4>Engenharia de Dados e DevOps</h4>
+          <div class="tag-list">
+            <span class="tag">Linux</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">PySpark</span>
+            <span class="tag">Apache Airflow</span>
+            <span class="tag">Apache Kafka</span>
+            <span class="tag">Elasticsearch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="section-header">
+        <h2>Contato e Perfis Acadêmicos</h2>
+        <span>Disponível para projetos em Ciência de Dados, Saúde Digital e Pesquisa</span>
+      </div>
+      <div class="social-links">
+        <a class="btn-link" href="mailto:lucecerqueira@gmail.com">lucecerqueira@gmail.com</a>
+        <a class="btn-link" href="https://www.linkedin.com/in/lucenildo-cerqueira-2534b228/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn-link" href="https://scholar.google.com/citations?user=sbiFXRIAAAAJ&hl=pt-BR" target="_blank" rel="noopener">Google Scholar (Índice h: 6)</a>
+        <a class="btn-link" href="https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/" target="_blank" rel="noopener">Web of Science / ResearcherID</a>
+        <a class="btn-link" href="https://github.com/lucecerqueira" target="_blank" rel="noopener">GitHub (@lucecerqueira)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Lucenildo Silva Cerqueira, DSc. — Portfólio Profissional e Acadêmico. Licenciado sob <a href="./LICENSE">MIT License</a>.</p>
+  </footer>
+
+</body>
+</html>
