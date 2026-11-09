@@ -1,76 +1,165 @@
+<style>
+  img[src*="shields.io"] {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 2px !important;
+    padding: 0 !important;
+  }
+  .hero-gif {
+    border-radius: 6px;
+    border: 1px solid #30363d !important;
+    max-width: 100%;
+    height: auto;
+  }
+  .nav-bar {
+    background: #161b22;
+    border: 1px solid #30363d;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .nav-bar a {
+    color: #58a6ff;
+    margin: 0 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nav-bar a:hover {
+    text-decoration: underline;
+  }
+  .project-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 18px;
+    margin-bottom: 16px;
+    color: #c9d1d9;
+  }
+  .project-card h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #58a6ff;
+  }
+</style>
+
+<div class="nav-bar">
+  <a href="#perfil">Perfil</a> |
+  <a href="#projetos">Projetos e Sistemas</a> |
+  <a href="#pesquisa">Produção Científica</a> |
+  <a href="#competencias">Stack Tecnológica</a> |
+  <a href="#contato">Contato</a>
+</div>
+
 <div align="center">
-
-# Olá, eu sou o Lucenildo Cerqueira, DSc. 👋
-### Cientista de Dados | Doutor em Engenharia Biomédica | Pesquisador em IA & Sinais Biológicos
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucenildo-cerqueira-2534b228/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucecerqueira@gmail.com)
-[![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white)](https://www.kaggle.com/lucenildocerqueira)
-[![Portfolio](https://img.shields.io/badge/Portfólio-6A1B9A?style=for-the-badge&logo=About.me&logoColor=white)](https://lucecerqueira.github.io/)
-[![Web of Science](https://img.shields.io/badge/Web_of_Science-5E33BF?style=for-the-badge&logo=clarivate&logoColor=white)](https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/)
+  <a href="https://www.linkedin.com/in/lucenildo-cerqueira-2534b228/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:lucecerqueira@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
+  <a href="https://www.kaggle.com/lucenildocerqueira"><img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white" alt="Kaggle"></a>
+  <a href="https://github.com/lucecerqueira"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/"><img src="https://img.shields.io/badge/Web_of_Science-5E33BF?style=for-the-badge&logo=clarivate&logoColor=white" alt="Web of Science"></a>
+</div>
 
 <br>
 
-<img src="https://raw.githubusercontent.com/lucecerqueira/lucecerqueira.github.io/main/vcg_mit.gif" alt="Vetorcardiograma - Processamento de Sinais Biomédicos" width="480" />
+<p align="center">
+  <img class="hero-gif" src="./vcg_mit.gif" alt="Processamento de Sinais Biomédicos - Vetorcardiograma 3D" width="500" />
+  <br>
+  <em>Reconstrução espacial e análise dinâmica de sinais cardíacos (Vetorcardiograma 3D).</em>
+</p>
 
+---
+
+## <a id="perfil"></a>Perfil Profissional
+
+Sou **Cientista de Dados** e **Doutor (DSc.) em Ciências / Engenharia Biomédica**, com atuação na interseção entre modelagem matemática, aprendizado de máquina (Machine e Deep Learning), engenharia de dados em saúde pública e desenvolvimento de sistemas analíticos.
+
+* **Ciência de Dados e IA em Saúde:** Desenvolvimento de modelos preditivos, classificação diagnóstica de sinais eletrofisiológicos (ECG/VCG), vigilância epidemiológica e análise espacial em oncologia.
+* **Engenharia de Software e Dados:** Arquitetura de pipelines ETL de alto desempenho para grandes bases governamentais (DATASUS/SIM) e desenvolvimento de aplicações web e painéis interativos (Python, Django, R/Shiny, PostgreSQL).
+* **Fisiologia e Biomecânica Computacional:** Modelagem não-linear de cinética cardiorrespiratória ($\dot{V}O_2$), ajuste de curvas multiparamétricas e análise de tempo de reação cognitiva.
+
+---
+
+## <a id="projetos"></a>Projetos e Sistemas em Destaque
+
+<div class="project-card">
+  <h4>Classificação Diagnóstica de ECG e Vetorcardiograma 3D com Machine Learning</h4>
+  <p>Pipeline de processamento de sinais biomédicos e inteligência artificial para detecção de Infarto do Miocárdio e alterações de ST-T utilizando reconstrução espacial tridimensional do vetorcardiograma (VCG).</p>
+  <p><strong>Tecnologias:</strong> Python, Scikit-Learn, Keras, Processamento Digital de Sinais (DSP).</p>
+</div>
+
+<div class="project-card">
+  <h4>Plataforma de Vigilância Oncológica e Pipeline ETL (SIM/DATASUS)</h4>
+  <p>Ecossistema para extração, descompactação nativa, transformação e carga (ETL) de microdados do Sistema de Informações sobre Mortalidade (SIM/DATASUS) integrado a painel geoespacial interativo para análise epidemiológica.</p>
+  <p><strong>Tecnologias:</strong> R, Shiny (bs4Dash, Leaflet, Plotly), Python, Django, PostgreSQL, C.</p>
+</div>
+
+<div class="project-card">
+  <h4>Sistema de Apoio à Decisão Clínica (Predição de Lesão Renal Aguda)</h4>
+  <p>Aplicação web voltada à estratificação de risco clínico para rabdomiólise e lesão renal aguda, equipada com sincronização offline e geração automatizada de relatórios técnicos em PDF.</p>
+  <p><strong>Tecnologias:</strong> Python, Django, PostgreSQL, Modelagem Estatística.</p>
+</div>
+
+<div class="project-card">
+  <h4>Plataforma Analítica para Eco-hidrologia e Qualidade da Água</h4>
+  <p>Sistema web estruturado para gerenciamento de dados ambientais, análises estatísticas e monitoramento de parâmetros de potabilidade e eco-hidrologia.</p>
+  <p><strong>Tecnologias:</strong> Python, Django, PostgreSQL, Pandas, Plotly.</p>
+</div>
+
+<div class="project-card">
+  <h4>NeuroPulse — Análise de Tempo de Reação Cognitiva</h4>
+  <p>Aplicação de alta precisão temporal para avaliação neurocognitiva e biomecânica executada diretamente no navegador com latência mínima.</p>
+  <p><strong>Tecnologias:</strong> Rust, WebAssembly (WASM), Leptos.</p>
 </div>
 
 ---
 
-## 🧬 Sobre Mim
+## <a id="pesquisa"></a>Produção Científica e Pesquisa
 
-Sou **Cientista de Dados** e **Doutor (DSc.) em Engenharia Biomédica**, com sólida trajetória na aplicação de modelagem matemática, estatística avançada, **Machine Learning** e **Deep Learning** para resolver problemas complexos.
-
-* 🔬 **Especialidades:** Processamento de sinais biológicos e séries temporais (ECG/VCG), modelagem preditiva, reconhecimento de padrões e inteligência artificial aplicada à saúde e negócios.
-* 📊 **Foco Técnico:** Transformação de dados brutos e de alta dimensionalidade em soluções escaláveis, desde a experimentação científica até o deploy em produção.
-* 🎓 **Pesquisa & Desenvolvimento:** Autor de publicações científicas internacionais revisadas por pares, unindo rigor metodológico acadêmico à agilidade do mercado de tecnologia.
+* **Computing in Cardiology (2025):** *Diagnostic ECG Classification of Myocardial Infarction and ST-T Changes Using Machine Learning via 3D Vectorcardiogram.*
+* **Fisiologia do Exercício e Cinética Metabólica:** Modelagem matemática não-linear da dinâmica do consumo de oxigênio ($\dot{V}O_2$), relações $\dot{V}O_2$/velocidade e bioestatística não-paramétrica.
 
 ---
 
-## 🛠️ Stack Tecnológica & Ferramentas
+## <a id="competencias"></a>Stack Tecnológica
 
-### 💻 Linguagens, Bancos de Dados & Ambiente
-![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
-![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+### Linguagens, Bancos de Dados e Ambiente
+![Python](https://img.shields.io/badge/Python-14354C?style=flat-square&logo=python&logoColor=white)
+![R](https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
-### 🧠 Ciência de Dados, Machine Learning & Deep Learning
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=Keras&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=Jupyter&logoColor=white)
+### Ciência de Dados, Machine Learning e Visualização
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=Keras&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white)
 
-### ☁️ Big Data, Engenharia de Dados & MLOps
-![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
-![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)
-![Apache Hadoop](https://img.shields.io/badge/Hadoop-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
-
-### 🌱 Explorando & Aprofundando
-![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
-![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
+### Desenvolvimento Web, Engenharia de Dados e Infraestrutura
+![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
+![Shiny](https://img.shields.io/badge/R_Shiny-276DC3?style=flat-square&logo=r&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=flat-square&logo=apachespark&logoColor=white)
+![Apache Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=Apache%20Airflow&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white)
+![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=flat-square&logo=elasticsearch&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 
 ---
 
-## 📈 Estatísticas no GitHub
+## <a id="contato"></a>Contato
 
-<div align="center">
-  <a href="https://github.com/lucecerqueira">
-    <img height="165em" src="https://github-readme-stats-fast.vercel.app/api?username=lucecerqueira&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true" alt="Estatísticas do GitHub" />
-    <img height="165em" src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=lucecerqueira&layout=compact&langs_count=8&theme=tokyonight&hide_border=true" alt="Linguagens mais usadas" />
-  </a>
-</div>
+* **E-mail:** [lucecerqueira@gmail.com](mailto:lucecerqueira@gmail.com)
+* **LinkedIn:** [linkedin.com/in/lucenildo-cerqueira-2534b228](https://www.linkedin.com/in/lucenildo-cerqueira-2534b228/)
+* **GitHub:** [github.com/lucecerqueira](https://github.com/lucecerqueira)
+* **Web of Science:** [ResearcherID: 2495914](https://publons.com/wos-op/researcher/2495914/lucenildo-s-cerqueira/)
 
 ---
-
-## 📄 Licença
-Este repositório está licenciado sob a **MIT License** — consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
+<p align="center">
+  <small>Lucenildo Silva Cerqueira, DSc. — Licenciado sob <a href="./LICENSE">MIT License</a>.</small>
+</p>
